@@ -21,8 +21,8 @@ def getHttpResponse(host,path):
         return res
 
 if __name__ == '__main__':
-    host = 'trade.jr.jd.com'
-    path = '/ajaxFinance/financeMainData.action?type=0&_dc=1498392460636'
-    # str = getHttpResponse('hq2fls.eastmoney.com','/EM_Quote2010PictureApplication/Flash.aspx?Type=CR&ID=6008281&lastNum=3&csum=E87E0399&cnum=239&ctype=0')
-    str = getHttpResponse(host,path)
+    # host = 'trade.jr.jd.com'
+    # path = '/ajaxFinance/financeMainData.action?type=0&_dc=1498392460636'
+    str = getHttpResponse('hq2fls.eastmoney.com','/EM_Quote2010PictureApplication/Flash.aspx?Type=CR&ID=6008281&lastNum=3&csum=E87E0399&cnum=239&ctype=0')
+    # str = getHttpResponse(host,path)
     print str

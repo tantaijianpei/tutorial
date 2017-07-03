@@ -9,8 +9,8 @@ import os
 import urllib
 import time
 
-email = r'tantaijianpei@gmail.com'
-pwd = r'tianyuanjian99'
+email = r''
+pwd = r''
 
 def begin_parse():
     try:

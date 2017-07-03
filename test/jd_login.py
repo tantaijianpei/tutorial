@@ -5,6 +5,10 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys  #需要引入keys包
 from lxml import etree
 import os
+import time
+
+username = ''
+pwd = ''
 
 def begin_parse():
     try:
@@ -15,9 +19,10 @@ def begin_parse():
         driver.get(begin_url)
         elem = driver.find_element_by_class_name(r"login-tab-r")
         elem.click()
-        driver.find_element_by_id(r"loginname").send_keys("tianyuanjian")
-        driver.find_element_by_id(r"nloginpwd").send_keys("youbingbani222")
+        driver.find_element_by_id(r"loginname").send_keys(username)
+        driver.find_element_by_id(r"nloginpwd").send_keys(pwd)
         driver.find_element_by_id(r"loginsubmit").send_keys(Keys.ENTER)
+        time.sleep(2)
         driver.get("http://trade.jr.jd.com/ajaxFinance/financeMainData.action?type=0&_dc=1498401305341")
         html=driver.page_source
         print html
