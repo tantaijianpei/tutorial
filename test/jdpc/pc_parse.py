@@ -266,13 +266,13 @@ def coredist(value,res):
     elif value == u'Intel CoreM': res['core'] = 2
     elif value == u'桌面级处理器': res['core'] = 4
     elif value == u'至强Xeon-E3': res['core'] = 5
-    elif value == u'酷睿Core i5': res['core'] = 6
-    elif value == u'Intel i5低功耗版': res['core'] = 6
-    elif value == u'Intel 其他': res['core'] = 5
-    elif value == u'Intel i5标准电压版': res['core'] = 7
-    elif value == u'Intel i7低功耗版': res['core'] = 8
-    elif value == u'酷睿Core i7': res['core'] = 8
-    elif value == u'Intel i7标准电压版': res['core'] = 9
+    elif value == u'酷睿Core i5': res['core'] = 7
+    elif value == u'Intel i5低功耗版': res['core'] = 8
+    elif value == u'Intel 其他': res['core'] = 6
+    elif value == u'Intel i5标准电压版': res['core'] = 9
+    elif value == u'Intel i7低功耗版': res['core'] = 10
+    elif value == u'酷睿Core i7': res['core'] = 11
+    elif value == u'Intel i7标准电压版': res['core'] = 12
 
 def discdist(value,res):
     if value == u'512G固态': res['ssd'] = 5.12

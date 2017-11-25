@@ -117,7 +117,7 @@ def analyse(ds,css,datas,attrs):
         ramInfo = {'2G':0,'32G':0,'4G':0,'16G':0,'8G':0,'otr':0}
         screenInfo = {11.6:0,12.5:0,13.3:0,14.0:0,15.6:0,17.3:0,18.4:0}
         weightInfo = {'weight_min':100.0,'weight_max':0.0,'weight_avg':0.0}
-        coreInfo = {0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,}
+        coreInfo = {0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0}
         ssdInfo = {'ssd_min':100.0,'ssd_max':0.0,'ssd_avg':0.0}
         discInfo = {'disc_min':100.0,'disc_max':0.0,'disc_avg':0.0}
         nvidiaInfo = {0:0,1:0,2:0,3:0}
@@ -230,22 +230,22 @@ def analyse(ds,css,datas,attrs):
 
 if __name__ == '__main__':
     attrs = {
-        'idle':False,
+        'idle':True,
         'ram':True,
-        'screen':False,
-        'weight':False,
+        'screen':True,
+        'weight':True,
         'core':True,
-        'ssd':False,
-        'disc':False,
-        'nvidia':False,
-        'resolution':False,
-        'depth':False,
-        'vram':False,
+        'ssd':True,
+        'disc':True,
+        'nvidia':True,
+        'resolution':True,
+        'depth':True,
+        'vram':True,
         'system':True,
-        'price':False
+        'price':True
     }
     arr,datas = get_data(r'D:\learn\laptop\data.dat',attrs)
-    n_class = 3
+    n_class = 5
     kmeans = KMeans(n_clusters=n_class,random_state=0).fit(arr)
     # print kmeans.labels_,kmeans.cluster_centers_
     css,ds = label_count(kmeans.labels_,n_class,datas) ## css 各类别中的个数，ds 各类别包含的sku列表
